@@ -1,0 +1,6 @@
+{
+  "name": "IntelliVue MX800 & B. Braun Space ICU Workstation",
+  "description": "Interactive critical care workstation simulating a Philips IntelliVue MX800 patient monitor with integrated Clinical Informatics PC (live PubChem & openFDA drug monographs) coupled to a 4-bay B. Braun SpaceStation infusion suite.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

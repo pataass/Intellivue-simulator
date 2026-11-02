@@ -1,0 +1,6 @@
+{
+  "summary": "Architectural and clinical UX plan for an interactive ICU bedside workstation combining a Philips IntelliVue MX800 Patient Monitor (with integrated iPC PubChem & openFDA pharmacology workbench) and a 4-bay B. Braun SpaceStation housing Perfusor Space, Infusomat Space, and SpaceControl modules with bidirectional PK/PD hemodynamic coupling.",
+  "updatedAt": "2026-11-02T17:09:31.995096142Z",
+  "requestFeedback": true,
+  "userFacing": true
+}

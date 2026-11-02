@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-monitor: "Barlow Condensed", "Arial Narrow", ui-sans-serif, sans-serif;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0d11;
+    color: #f8fafc;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+  }
+
+  button,
+  select,
+  input {
+    font-family: inherit;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.font-monitor {
+  font-family: var(--font-monitor);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes bbChevronCascade {
+  0%, 100% {
+    opacity: 0.22;
+    transform: translateX(1px);
+  }
+  45% {
+    opacity: 1;
+    transform: translateX(-1px);
+  }
+}
+
+@keyframes ivDropFall {
+  0% {
+    transform: translateY(-4px) scale(0.85);
+    opacity: 0.95;
+  }
+  75% {
+    transform: translateY(13px) scale(1);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(16px) scale(1.25, 0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes ivFluidFlow {
+  0% {
+    stroke-dashoffset: 28;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes leadScrewSpin {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -12px 0;
+  }
+}
+
+@keyframes leadScrewReverse {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 12px 0;
+  }
+}
+
+@keyframes peristalticWave {
+  0%, 100% {
+    transform: scaleY(0.32);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ledBlinkGreen {
+  0%, 65% {
+    opacity: 1;
+  }
+  66%, 100% {
+    opacity: 0.35;
+  }
+}
+
+.bb-chevron-flow {
+  animation: bbChevronCascade 1.05s ease-in-out infinite;
+}
+
+.iv-drop-anim {
+  animation: ivDropFall 1.15s cubic-bezier(0.4, 0, 0.85, 1) infinite;
+}
+
+.iv-fluid-stream {
+  animation: ivFluidFlow 0.95s linear infinite;
+}
+
+.perfusor-screw-active {
+  background-image: repeating-linear-gradient(
+    -68deg,
+    #cbd5e1 0px,
+    #cbd5e1 3px,
+    #64748b 3px,
+    #64748b 6px
+  );
+  background-size: 12px 100%;
+  animation: leadScrewSpin 0.75s linear infinite;
+}
+
+.perfusor-screw-rewind {
+  background-image: repeating-linear-gradient(
+    -68deg,
+    #fde047 0px,
+    #fde047 3px,
+    #ca8a04 3px,
+    #ca8a04 6px
+  );
+  background-size: 12px 100%;
+  animation: leadScrewReverse 0.35s linear infinite;
+}
+
+.perfusor-screw-idle {
+  background-image: repeating-linear-gradient(
+    -68deg,
+    #cbd5e1 0px,
+    #cbd5e1 3px,
+    #94a3b8 3px,
+    #94a3b8 6px
+  );
+  background-size: 12px 100%;
+}
+
+.peristaltic-finger {
+  animation: peristalticWave 0.9s ease-in-out infinite;
+}
+
+.led-infusing {
+  animation: ledBlinkGreen 1.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-chevron-flow,
+  .iv-drop-anim,
+  .iv-fluid-stream,
+  .perfusor-screw-active,
+  .perfusor-screw-rewind,
+  .peristaltic-finger,
+  .led-infusing {
+    animation: none;
+  }
+}
